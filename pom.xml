@@ -1,6 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.alfresco.aps</groupId>
 	<artifactId>super-cool-process-app</artifactId>
@@ -8,14 +7,8 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>APS Project Example</name>
 	<description>super-cool-process-app</description>
-	<dependencies>
-		<dependency>
-			<groupId>com.alfresco.aps</groupId>
-			<artifactId>aps-unit-test-utils</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
 	<build>
+		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -32,11 +25,8 @@
 					<execution>
 						<configuration>
 							<descriptors>
-								<descriptor>src/main/resources/assembly/assembly.xml</descriptor>
+								<descriptor>src/assembly/assembly.xml</descriptor>
 							</descriptors>
-							<!-- if you have special character issues, this is an option to play 
-								with. not required in most cases -->
-							<!-- <archiverConfig> <encoding>UTF-8</encoding> </archiverConfig> -->
 						</configuration>
 						<id>create-distribution</id>
 						<phase>package</phase>
@@ -48,4 +38,14 @@
 			</plugin>
 		</plugins>
 	</build>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<!-- repositories here -->
+	</repositories>
 </project>
