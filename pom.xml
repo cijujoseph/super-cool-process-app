@@ -25,7 +25,7 @@
 					<execution>
 						<configuration>
 							<descriptors>
-								<descriptor>src/assembly/assembly.xml</descriptor>
+								<descriptor>src/main/resources/assembly/assembly.xml</descriptor>
 							</descriptors>
 						</configuration>
 						<id>create-distribution</id>
